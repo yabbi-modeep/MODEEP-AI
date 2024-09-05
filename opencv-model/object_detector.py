@@ -3,7 +3,6 @@ import utlis
 
 #웹캠 쓸지 안쓸지 안쓰면 이미지로
 webcam = False
-path = 'uploaded_files/string.png'
 cap = cv2.VideoCapture(0)
 cap.set(10,160)
 cap.set(3,1920)
@@ -15,7 +14,6 @@ hP= 297 *scale
 
 while True:
     if webcam:success,img = cap.read()
-    else: img = cv2.imread(path)
 
     imgContours , conts = utlis.getContours(img,minArea=50000,filter=4)
     if len(conts) != 0:
