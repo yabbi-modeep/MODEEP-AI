@@ -7,3 +7,4 @@ fastapi
 uvicorna
 python-multipart
 pydantic-settings
+websockets
