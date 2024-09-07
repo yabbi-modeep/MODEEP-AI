@@ -4,6 +4,10 @@ opencv-contrib-python #opencv에 없는 추가 라이브러리
 scipy
 boto3 #aws
 fastapi
-uvicorna
+uvicorn
 python-multipart
 pydantic-settings
+websockets
+pandas
+torch
+transformers
