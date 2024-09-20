@@ -30,8 +30,8 @@
 # # gemma usage
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from keys import access_token
 import torch
+from keys import access_token
 
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b-it", token=access_token)
 model = AutoModelForCausalLM.from_pretrained(
@@ -40,7 +40,7 @@ model = AutoModelForCausalLM.from_pretrained(
     token=access_token
 )
 
-input_text = "Write me a poem about Machine Learning."
+input_text = '''"What is your name?" translate this to korean'''
 input_ids = tokenizer(input_text, return_tensors="pt")
 
 outputs = model.generate(**input_ids)
